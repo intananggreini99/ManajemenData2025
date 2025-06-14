@@ -1,5 +1,7 @@
 
 # Praktikum Manajemen Data  
+###Link Laporan Praktikum : https://intip.in/WdiR
+
 ## Writing Interactive Scripts & Function on Bash Beginner Guide Modul
 
 # Chapter 8 - Writing Interactive Scripts
