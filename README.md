@@ -8,7 +8,7 @@
 
 ### 1. Program: Validasi Usia Konsumsi Alkohol
 
-Program `exercise1.sh` menerima input usia dari user dan menampilkan apakah user diperbolehkan mengkonsumsi alkohol.
+Bash script `exercise1.sh` menerima input usia dari user dan menampilkan apakah user diperbolehkan mengkonsumsi alkohol.
 
 #### Logika:
 - Memvalidasi input usia (hanya angka).
@@ -20,7 +20,7 @@ Program `exercise1.sh` menerima input usia dari user dan menampilkan apakah user
 
 ### 2. Program: Kompresi File dengan Pilihan User
 
-Program `exercise2.sh` menerima **1 file** sebagai argumen dan memberikan pilihan kompresi:
+Bash script `exercise2.sh` menerima **1 file** sebagai argumen dan memberikan pilihan kompresi:
 - gzip
 - bzip2
 - compress
@@ -37,7 +37,7 @@ Program `exercise2.sh` menerima **1 file** sebagai argumen dan memberikan piliha
 
 ### 3. Program: Backup Otomatis Home Directory
 
-Program `homebackup.sh` melakukan backup home directory ke `/var/backups` dengan opsi:
+Bash script `homebackup.sh` melakukan backup home directory ke `/var/backups` dengan opsi:
 - Full backup
 - Incremental backup
 
@@ -53,7 +53,7 @@ Program `homebackup.sh` melakukan backup home directory ke `/var/backups` dengan
 
 ### 4. Program: Menambah User Linux
 
-Program `simple-useradd.sh` menambahkan user baru dengan ketentuan:
+Bash script `simple-useradd.sh` menambahkan user baru dengan ketentuan:
 - Harus 1 argumen (username).
 - Menentukan user ID yang tersedia.
 - Membuat private group.
@@ -67,7 +67,7 @@ Program `simple-useradd.sh` menambahkan user baru dengan ketentuan:
 
 ### 5. Program: Cek File Berdasarkan Input User
 
-Program ini memungkinkan user memasukkan nama file yang ingin diperiksa secara interaktif, bukan dari argumen.
+Bash script exercise5.sh memungkinkan user memasukkan nama file yang ingin diperiksa secara interaktif, bukan dari argumen.
 
 #### Logika:
 - Meminta input nama file dari user.
@@ -89,9 +89,9 @@ Fungsi `printman` mencetak halaman manual ke file simulasi printer.
 
 ---
 
-### 7. Membuat Alias Command OS Lain di Bash
+### 7. Membuat Alias Command Bash OS DOS dan Unix di Bash OS Linux Ubuntu
 
-- Membuat direktori `~/BashGuide/chapter11` untuk menyimpan file bash script fungsi.
+- Membuat direktori `~/BashGuide/chapter11` untuk menyimpan file bash script fungsi `dos_aliases.sh` dan `unix_aliases.sh`.
 - Membuat alias bash mirip dengan DOS dan UNIX.
 - Memuat otomatis fungsi-fungsi ini di `~/.bashrc`.
 
