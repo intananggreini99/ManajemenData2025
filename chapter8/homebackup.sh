@@ -4,6 +4,7 @@ BACKUP_DIR="/var/backups"
 HOME_DIR="$HOME"
 FULL_BACKUP="${BACKUP_DIR}/full_backup.tar"
 INCR_BACKUP="${BACKUP_DIR}/incremental_backup.tar"
+SNAPSHOT_FILE="${BACKUP_DIR}/backup.snar"
 
 if [ $# -ne 0 ]; then
     echo "Program bash script homebackup.sh hanya bisa dijalankan tanpa argumen"
@@ -36,7 +37,7 @@ if [ "$BACKUP_TYPE" = "full" ]; then
 
 elif [ "$BACKUP_TYPE" = "incr" ]; then
     # Cek apakah full backup ada
-    if [ -f "$FULL_BACKUP" ]; then
+    if [ ! -f "$FULL_BACKUP" ]; then
         echo "Belum ada backup full. Backup full akan dilakukan."
         tar --create --verbose --preserve-permissions \
             --file="$FULL_BACKUP" \
@@ -68,6 +69,9 @@ fi
 
 echo "Mengompresi file backup (harap tunggu)."
 gzip -f "$BACKUP_FILE"
+
+# Update variabel BACKUP_FILE menjadi file hasil kompresi
+BACKUP_FILE="${BACKUP_FILE}.gz"
 
 SIZE=$(du -h "$BACKUP_FILE" | cut -f1)
 echo "Backup berhasil. Ukuran file backup: $SIZE"
